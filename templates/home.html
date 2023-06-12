@@ -6,9 +6,16 @@
   <title>Restaurantly</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
   <!-- Custom CSS -->
   <style>
+   
+body{
+   font-family: 'Open Sans',serif;
+}
     /* Update the color scheme */
     :root {
       --primary-color: #0c0b09;
@@ -149,11 +156,12 @@
   }
 
   .card {
-    background-color: #f8f8f8;
+    background-color: #0c0b09;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
     text-align: center;
+    color: #fff;
   }
 
   .card-title {
@@ -199,7 +207,7 @@
   .section-title h2 {
     color: #cda45e;
     font-family: 'Agency FB', sans-serif;
-    font-style: italic;
+    
     font-weight: bold;
     font-size: 2.5rem;
     margin-bottom: 15px;
@@ -208,7 +216,7 @@
   .section-title p {
     color: #cda45e;
     font-family: 'Agency FB', sans-serif;
-    font-style: italic;
+    
     margin-bottom: 30px;
   }
 
@@ -244,14 +252,14 @@
   .member-info h4 {
     color: #cda45e;
     font-family: 'Agency FB', sans-serif;
-    font-style: italic;
+   
     margin-bottom: 5px;
   }
 
   .member-info span {
     color: #cda45e;
     font-family: 'Agency FB', sans-serif;
-    font-style: italic;
+    
   }
 
   .member:hover .member-info {
@@ -284,7 +292,7 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
-  color: #fff;
+  color: #0c0b09;
   margin-bottom: 10px;
   transition: all ease-in-out 0.3s;
   border-radius: 50px;
@@ -293,7 +301,7 @@
 
 .menu #menu-flters li:hover,
 .menu #menu-flters li.filter-active {
-  color: #cda45e;
+  color: gold;
 }
 
 .menu #menu-flters li:last-child {
@@ -332,16 +340,16 @@
 
 .menu .menu-content a {
   padding-right: 10px;
-  background: #1a1814;
+  
   position: relative;
   z-index: 3;
   font-weight: 700;
-  color: white;
+  color: #0c0b09;
   transition: 0.3s;
 }
 
 .menu .menu-content a:hover {
-  color: #cda45e;
+  color: gold;
 }
 
 .menu .menu-content span {
@@ -350,15 +358,15 @@
   z-index: 3;
   padding: 0 10px;
   font-weight: 600;
-  color: #cda45e;
+  color: gold;
 }
 
 .menu .menu-ingredients {
   margin-left: 85px;
-  font-style: italic;
+ 
   font-size: 14px;
   font-family: "Poppins", sans-serif;
-  color: rgba(255, 255, 255, 0.5);
+  color: #0c0b09;
 }
 /*--------------------------------------------------------------
 # Why Us
@@ -374,7 +382,7 @@
   display: block;
   font-size: 28px;
   font-weight: 700;
-  color: #cda45e;
+  color: gold;
 }
 
 .why-us .box h4 {
@@ -393,7 +401,7 @@
 }
 
 .why-us .box:hover {
-  background: #cda45e;
+  background: gold;
   padding: 30px 30px 70px 30px;
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
@@ -406,51 +414,166 @@
 
 
   #carouselExampleIndicators {
-    margin-top: 180px;
+    margin-top: 80px;
+    margin-bottom: 100px;
   }
+
+/* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reseting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #f8f8f8, #f8f8f8);
+    min-height: 100vh;
+}
+
+.owl-carousel .owl-item {
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item .card {
+    padding: 30px;
+    position: relative;
+}
+
+.owl-carousel .owl-stage-outer {
+    overflow-y: auto !important;
+    padding-bottom: 40px;
+}
+
+.owl-carousel .owl-item img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.owl-carousel .owl-item .card .name {
+    position: absolute;
+    bottom: -20px;
+    left: 33%;
+    color: #0c0b09;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: gold;
+    padding: 0.3rem 0.4rem;
+    border-radius: 5px;
+    box-shadow: 2px 3px 15px #3c405a;
+}
+
+.owl-carousel .owl-item .card {
+    opacity: 0.2;
+    transform: scale3d(0.8, 0.8, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item.active.center .card {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+}
+
+.owl-carousel .owl-dots {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    height: 20px;
+    background: #0c0b09 !important;
+    border-radius: 2px !important;
+    opacity: 0.8;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    height: 13px;
+    width: 13px;
+    opacity: 1;
+    transform: translateY(2px);
+    background: #888 !important;
+}
+
+@media(min-width: 480.6px) and (max-width: 575.5px) {
+    .owl-carousel .owl-item .card .name {
+        left: 24%;
+    }
+}
+
+@media(max-width: 360px) {
+    .owl-carousel .owl-item .card .name {
+        left: 30%;
+    }
+}
+/*TILT*/
+.tilt {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+ 
+.tilt:hover {
+  -webkit-transform: rotate(-10deg);
+     -moz-transform: rotate(-10deg);
+       -o-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
   </style>
 </head>
-<body>
+<body >
   {% load static %}
   
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark " >
+  <nav class="navbar navbar-expand-lg navbar-dark bg-warning  fixed-top" style="margin-bottom: 100px;" >
   <div class="container">
     
-    <h1 style="font-family: 'Agency FB', sans-serif;font-style: italic;" class="pl-2 pt-5">Food Heaven</h1>
+    <h1 style="font-family: 'Open Sans',serif;" class="pl-2 pt-5">Food Heaven</h1>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" style="color: #0c0b09;font-style: italic;font-weight: bold;" href="#">Home</a>
+          <a class="nav-link" style="color: #0c0b09;;font-weight: bold;" href="{% url  'home' %}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="color: #0c0b09;font-style: italic;font-weight: bold;" href="#">About us</a>
+          <a class="nav-link scrollto" style="color: #0c0b09;;font-weight: bold;" href="#about">About us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="color: #0c0b09;font-style: italic;font-weight: bold;" href="#">Menu</a>
+          <a class="nav-link " style="color: #0c0b09;;font-weight: bold;" href="{% url  'menu' %}">Menu</a>
         </li>
-        <li><a class="nav-link" style="color: #0c0b09;font-style: italic;font-weight: bold;" href="#">Shop</a></li>
-        <li><a class="nav-link" style="color: #0c0b09;font-style: italic;font-weight: bold;" href="#">Pages</a></li>
-        <li><a class="nav-link" style="color: #0c0b09;font-style: italic;font-weight: bold;" href="#">Blog</a></li>
-        <li><a class="nav-link" style="color: #0c0b09;font-style: italic;font-weight: bold;" href="#">Contact</a></li>
+        <li><a class="nav-link" style="color: #0c0b09;;font-weight: bold;" href="{% url  'gallery' %}">Gallery</a></li>
+        <li><a class="nav-link" style="color: #0c0b09;font-weight: bold;" href="{% url  'cart' %}">Cart</a></li>
+        
+        <li><a class="nav-link scrollto" style="color: #0c0b09;font-weight: bold;" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 <!--Hero-->
-<div class="container col-xxl-8 px-4 py-5">
+<div class="container col-xxl-8 px-4 py-5" style="margin-top: 100px;" >
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
+
+        <div class="tilt pic">
         <img src="https://images2.alphacoders.com/560/thumbbig-560491.webp" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
       </div>
+
+      </div>
       <div class="col-lg-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3">Welcome to our restaurant !</h1>
-        <p class="lead">We serve the most scrumptious food made with the most finely and freshly picked ingredients ! Ours is an establishment known for its long heritage and history in culinary delights. We humbly welcome you to become our patron and join us today !</p>
+        <h1 class="display-5 fw-bold lh-1 mb-3" style="font-family: 'Open Sans',serif;">Welcome to our restaurant !</h1>
+        <p class="lead" style="font-family: 'Open Sans',serif;font-style: italic;" >We serve the most scrumptious food made with the most finely and freshly picked ingredients ! Ours is an establishment known for its long heritage and history in culinary delights. We humbly welcome you to become our patron and join us today !</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <button type="button" class="btn btn-warning bg-warning btn-lg px-4 me-md-2">About us</button>
+          <button type="button" class="btn btn-warning bg-warning btn-lg px-4 me-md-2"  style="font-family: Agency FB;">About us</button>
           
         </div>
       </div>
@@ -466,24 +589,24 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="https://wallpaperaccess.com/full/3014596.jpg" height="300px" alt="First slide">
+      <img class="d-block w-100" src="https://wallpapercave.com/dwp1x/wp3108440.jpg" height="300px" alt="First slide">
       <div class="carousel-caption">
-        <h3 style="color: #cda45e;font-family: Agency FB;font-style: italic;">Fine Dining</h3>
-        <p style="color: #cda45e;font-family: Agency FB">Best dishes at your disposal</p>
+        <h3 style="color: gold;font-family: Agency FB;">Best Food</h3>
+        <p style="color:gold;font-family: Agency FB">Best Food in town !</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://wallpaperaccess.com/full/3014602.jpg" height="300px" alt="Second slide">
+      <img class="d-block w-100" src="https://wallpapercave.com/dwp1x/wp3983043.jpg" height="300px" alt="Second slide">
       <div class="carousel-caption">
-        <h3 style="color: #cda45e;font-family: Agency FB;font-style: italic;">Elegant Events</h3>
-        <p style="color: #cda45e;font-family: Agency FB">Oraganise your important dates here</p>
+        <h3 style="color: gold;font-family: Agency FB;">Cheesy Pizzas</h3>
+        <p style="color: gold;font-family: Agency FB">Our Pizzas are made with love !</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://wallpaperaccess.com/full/3014609.jpg" height="300px" alt="Third slide">
+      <img class="d-block w-100" src="https://wallpapercave.com/dwp1x/wp3982978.jpg" height="300px" alt="Third slide">
       <div class="carousel-caption">
-        <h3 style="color: #cda45e;font-family: Agency FB;font-style: italic;">Mystique Ambience</h3>
-        <p style="color: #cda45e;font-family: Agency FB">We strive to achieve perfection !</p>
+        <h3 style="color: gold;font-family: Agency FB;">Great Ambience</h3>
+        <p style="color: gold;font-family: Agency FB">We create a great atmosphere for parties !</p>
       </div>
     </div>
   </div>
@@ -498,20 +621,20 @@
 </div>
 
 <!-- ======= Menu Section ======= -->
-<section id="menu" class="menu section-bg">
+<section id="menu" class="menu section-bg " style="color: #0c0b09;background-color: #f8f8f8;margin-bottom: 100px;">
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <h2 style="font-family: Agency FB;font-style: italic;">MENU</h2>
-      <p style="font-family: Agency FB;font-style: italic;">Check Out Our Tasty Menu</p>
+      <h2 style="font-family: 'Open Sans',serif;;color: #0c0b09;">SPECIALTIES</h2>
+      <p style="font-family: 'Open Sans',serif;;color: #0c0b09;">Check Out Our Special Dishes</p>
     </div>
 
     
 
-    <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+    <div class="row menu-container" data-aos="fade-up" data-aos-delay="200" style="color: #0c0b09;background-color: #f8f8f8;">
 
       <div class="col-lg-6 menu-item filter-starters">
-        <img src="{% static 'assets/img/menu/lobster-bisque.jpg' %}" class="menu-img" alt="">
+        <img src="https://th.bing.com/th?id=OIP.Mi8TY5IUXKFm7H4SlA8OoQHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" class="menu-img" alt="">
         <div class="menu-content">
           <a href="#">Lobster Bisque</a><span>$12</span>
         </div>
@@ -521,7 +644,7 @@
       </div>
 
       <div class="col-lg-6 menu-item filter-specialty">
-        <img src="{% static 'assets/img/menu/bread-barrel.jpg' %}" class="menu-img" alt="">
+        <img src="https://th.bing.com/th/id/OIP.Nnx4kFkPKEzTVevUKw-U9wHaE8?w=278&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="menu-img" alt="">
         <div class="menu-content">
           <a href="#">Bread Barrel</a><span>$12</span>
         </div>
@@ -531,7 +654,7 @@
       </div>
 
       <div class="col-lg-6 menu-item filter-starters">
-        <img src="{% static 'assets/img/menu/cake.jpg' %}" class="menu-img" alt="">
+        <img src="https://th.bing.com/th/id/OIP.Y-PE6eZp5F5fzz46eYoUTwHaE7?w=247&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="menu-img" alt="">
         <div class="menu-content">
           <a href="#">Crab Cake</a><span>$12</span>
         </div>
@@ -541,7 +664,7 @@
       </div>
 
       <div class="col-lg-6 menu-item filter-salads">
-        <img src="{% static 'assets/img/menu/caesar.jpg' %}" class="menu-img" alt="">
+        <img src="https://th.bing.com/th/id/OIP.xNO5PCZ7Y-5wsCnon5ouJwHaE8?w=202&h=135&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="menu-img" alt="">
         <div class="menu-content">
           <a href="#">Caesar Selections</a><span>$8</span>
         </div>
@@ -551,7 +674,7 @@
       </div>
 
       <div class="col-lg-6 menu-item filter-specialty">
-        <img src="{% static 'assets/img/menu/tuscan-grilled.jpg' %}" class="menu-img" alt="">
+        <img src="https://th.bing.com/th/id/OIP.E7RdQKMMUU5fMd70Sn5SOgHaEK?w=295&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="menu-img" alt="">
         <div class="menu-content">
           <a href="#">Tuscan Grilled</a><span>$9</span>
         </div>
@@ -561,7 +684,7 @@
       </div>
 
       <div class="col-lg-6 menu-item filter-starters">
-        <img src="{% static 'assets/img/menu/mozzarella.jpg' %}" class="menu-img" alt="">
+        <img src="https://th.bing.com/th/id/OIP.ZYYJ1G1Mk2IQod16lUzV2AHaE8?w=285&h=190&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="menu-img" alt="">
         <div class="menu-content">
           <a href="#">Mozzarella Stick</a><span>$4</span>
         </div>
@@ -571,7 +694,7 @@
       </div>
 
       <div class="col-lg-6 menu-item filter-salads">
-        <img src="{% static 'assets/img/menu/greek-salad.jpg' %}" class="menu-img" alt="">
+        <img src="https://th.bing.com/th/id/OIP.sbchbIra89km3e-933CtrwHaE6?w=202&h=134&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="menu-img" alt="">
         <div class="menu-content">
           <a href="#">Greek Salad</a><span>$9</span>
         </div>
@@ -581,7 +704,7 @@
       </div>
 
       <div class="col-lg-6 menu-item filter-salads">
-        <img src="{% static 'assets/img/menu/spinach-salad.jpg' %}" class="menu-img" alt="">
+        <img src="https://th.bing.com/th/id/OIP.wSNn6WKgZjsQpARKzeoNUAHaE8?w=202&h=135&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="menu-img" alt="">
         <div class="menu-content">
           <a href="#">Spinach Salad</a><span>$9</span>
         </div>
@@ -591,7 +714,7 @@
       </div>
 
       <div class="col-lg-6 menu-item filter-specialty">
-        <img src="{% static 'assets/img/menu/lobster-roll.jpg' %}" class="menu-img" alt="">
+        <img src="https://th.bing.com/th/id/OIP.JvTMN_oLvgdIjsbsj26OsAHaE8?w=278&h=185&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="menu-img" alt="">
         <div class="menu-content">
           <a href="#">Lobster Roll</a><span>$12</span>
         </div>
@@ -613,24 +736,26 @@
 
 
   <!-- About -->
-  <section class="about py-5">
+  <section class="about py-5" style="color: #0c0b09;background-color: #f8f8f8;margin-bottom: 100px;" id="about">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h2 class="text-center mb-4" style="font-family: Agency FB;font-style: italic;">ABOUT US</h2>
-          <p style="font-style: italic;">We heartily welcome you to our humble establishment. Ours is a top-notch catering and event management service and all the services we provide are at reasonable cost, without sacrificing elegance and luxury. Quality is not a compromise for us and we donot make any sacrifices when it comes to booking time and customer service. We
+          <h2 class="text-center mb-4" style="font-family: 'Open Sans',serif;font-weight: bold;" >ABOUT US</h2>
+          <p style="font-style: italic;font-family: 'Open Sans',serif;">We heartily welcome you to our humble establishment. Ours is a top-notch catering and event management service and all the services we provide are at reasonable cost, without sacrificing elegance and luxury. Quality is not a compromise for us and we donot make any sacrifices when it comes to booking time and customer service. We
             consider our patrons as one of our own Restaurantly family and thus the respect ,support and love we have earned from them over 
             the last 18 years.Thank you for being one of us !  </p>
           
-              <h4 style="font-style: italic;font-family: Agency FB">Open Hours:</h4>
-              <p style="font-style: italic;font-family: Agency FB">
+              <h4 style="font-style: italic;font-family: 'Open Sans',serif;">Open Hours:</h4>
+              <p style="font-style: italic;font-family: 'Open Sans',serif;">
                 <b>Monday-Saturday:
                 11:00 AM - 23:00 PM</b>
               </p>
            
         </div>
         <div class="col-md-6">
-          <img src="https://wallpaperaccess.com/full/3014601.jpg" alt="About Image" class="img-fluid">
+          <div class="tilt pic">
+          <img src="https://wallpapercave.com/dwp1x/wp3983030.jpg" alt="About Image" class="img-fluid">
+        </div>
         </div>
       </div>
     </div>
@@ -639,14 +764,14 @@
 
 
 
-  <div style="background-image: url(https://wallpaperaccess.com/full/3014745.jpg);background-repeat: no-repeat;background-size: cover ;"  >
+  <div style="background-image: url(https://wallpapercave.com/dwp1x/wp3983003.jpg);background-repeat: no-repeat;background-size: cover ;"  >
 <!-- ======= Why Us Section ======= -->
-<section id="why-us" class="why-us">
+<section id="why-us" class="why-us" style="margin-top: 100px;">
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <h2 style="color: #0c0b09;font-family: Agency FB;font-weight: bold;font-style: italic;">WHY US</h2>
-      <p style="color: #0c0b09;font-family: Agency FB;font-weight: bold">Why Choose Our Restaurant ?</p>
+      <h2 style="color: #0c0b09;font-family: 'Open Sans',serif;font-weight: bold;">WHY US</h2>
+      <p style="color: #0c0b09;font-family: 'Open Sans',serif;font-weight: bold">Why Choose Our Restaurant ?</p>
     </div>
 
     <div class="row">
@@ -654,7 +779,7 @@
       <div class="col-lg-4" >
         <div class="box" data-aos="zoom-in" data-aos-delay="100" >
           
-          <h4 style="font-family: Agency FB;font-style: italic">Fast, Non-contact Delivery</h4>
+          <h4 style="font-family: Agency FB;">Fast, Non-contact Delivery</h4>
           <p style="font-style: italic;font-family: Agency FB">Food is delivered at very fast pace without any physical contact. Be sure to stay and eat healthy !</p>
         </div>
       </div>
@@ -662,7 +787,7 @@
       <div class="col-lg-4 mt-4 mt-lg-0">
         <div class="box" data-aos="zoom-in" data-aos-delay="100">
          
-          <h4 style="font-family: Agency FB;font-style: italic">No Sacrifices</h4>
+          <h4 style="font-family: Agency FB;">No Sacrifices</h4>
           <p style="font-style: italic;font-family: Agency FB">We donot make any sacrifices when it comes to quality, time and customer service. We strive for excellence !</p>
         </div>
       </div>
@@ -670,7 +795,7 @@
       <div class="col-lg-4 mt-4 mt-lg-0">
         <div class="box" data-aos="zoom-in" data-aos-delay="100">
           
-          <h4 style="font-family: Agency FB;font-style: italic">Five-star Experience</h4>
+          <h4 style="font-family: Agency FB;">Five-star Experience</h4>
           <p style="font-style: italic;font-family: Agency FB">Experience a five-star cuisine or event at an affordable fee, At your own leisure. Join us today !</p>
         </div>
       </div>
@@ -687,7 +812,7 @@
   <!-- Featured Dishes -->
   <section class="featured-dishes py-5">
     <div class="container">
-      <h2 class="text-center mb-4" style="color: #0c0b09;font-family: Agency FB;font-style: italic;">FEATURED DISHES</h2>
+      <h2 class="text-center mb-4" style="color: #0c0b09;font-family: 'Open Sans',serif;font-weight: bold;">FEATURED DISHES</h2>
       <div class="row">
         <div class="col-md-4">
           <div class="card">
@@ -695,7 +820,7 @@
             <div class="card-body">
               <h5 class="card-title" style="font-family: Agency FB;">Pastas</h5>
               <p class="card-text" style="font-style: italic;">Savory Italian dish</p>
-              <a href="#" class="btn btn-warning">Order Now</a>
+              <a href="#" class="btn btn-warning" style="background-color: gold;">Order Now</a>
             </div>
           </div>
         </div>
@@ -705,7 +830,7 @@
             <div class="card-body">
               <h5 class="card-title" style="font-family: Agency FB;">Pizza</h5>
               <p class="card-text" style="font-style: italic;">Classsic Italian bread</p>
-              <a href="#" class="btn btn-warning">Order Now</a>
+              <a href="#" class="btn btn-warning" style="background-color: gold;" >Order Now</a>
             </div>
           </div>
         </div>
@@ -715,7 +840,7 @@
             <div class="card-body">
               <h5 class="card-title" style="font-family: Agency FB;">Seafood Buffet</h5>
               <p class="card-text" style="font-style: italic;">Fresh Seafood at your table</p>
-              <a href="#" class="btn btn-warning">Order Now</a>
+              <a href="#" class="btn btn-warning" style="background-color: gold;" >Order Now</a>
             </div>
           </div>
         </div>
@@ -729,9 +854,9 @@
 
 
   <!-- Reviews -->
-  <section class="reviews py-5">
+  <section class="reviews py-5" style="margin-top: 100px;">
     <div class="container">
-      <h2 class="text-center mb-4 section-title" style="color: #cda45e;font-family: Agency FB;font-style: italic;" >CUSTOMER REVIEWS</h2>
+      <h2 class="text-center mb-4 section-title" style="color: #0c0b09;font-family: 'Open Sans',serif;font-weight: bold;" >CUSTOMER REVIEWS</h2>
       <div id="reviewsCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#reviewsCarousel" data-slide-to="0" class="active"></li>
@@ -742,7 +867,7 @@
           <div class="carousel-item active">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title" style="font-family: Agency FB;font-style: italic;">Good Pizzas</h5>
+                <h5 class="card-title" style="font-family: Agency FB;">Good Pizzas</h5>
                 <p class="card-text" style="font-family: Agency FB;font-style: italic;">"Tastes like those authentic Italian ones. Simply Excellent and fantastic !"</p>
               </div>
             </div>
@@ -750,7 +875,7 @@
           <div class="carousel-item">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title" style="font-family: Agency FB;font-style: italic;">Great Ambience</h5>
+                <h5 class="card-title" style="font-family: Agency FB;">Great Ambience</h5>
                 <p class="card-text" style="font-family: Agency FB;font-style: italic;">"The lighting and decorations fill me with awe."</p>
               </div>
             </div>
@@ -758,7 +883,7 @@
           <div class="carousel-item">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title" style="font-family: Agency FB;font-style: italic;">Great Memories</h5>
+                <h5 class="card-title" style="font-family: Agency FB;">Great Memories</h5>
                 <p class="card-text" style="font-family: Agency FB;font-style: italic;">"I had my wedding party and reception organized here."</p>
               </div>
             </div>
@@ -776,13 +901,117 @@
     </div>
   </section>
   </div>
+
+<!--Testimonial-->
+<h2 class="text-center mb-4 section-title" style="color: #0c0b09;font-family: 'Open Sans',serif;font-weight: bold;" >MORE FROM OUR PATRONS...</h2>
+<div class="owl-carousel owl-theme mt-5">
+  <div class="owl-item">
+      <div class="card">
+          <div class="img-card">
+              <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt="">
+          </div>
+          <div class="testimonial mt-4 mb-2" style="font-family: Agency FB;font-style: italic;">
+             Good stuff.
+          </div>
+          <div class="name" style="font-family: Agency FB;font-style: italic;">
+              Denis Richie
+          </div>
+      </div>
+  </div>
+  <div class="owl-item">
+      <div class="card">
+          <div class="img-card">
+              <img src="https://images.pexels.com/photos/1024311/pexels-photo-1024311.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                  alt="">
+          </div>
+          <div class="testimonial mt-4 mb-2" style="font-family: Agency FB;font-style: italic;">
+            Loved it. The pizzas were excellent ! Especially the pepperoni ones i had yesterday.
+          </div>
+          <div class="name" style="font-family: Agency FB;font-style: italic;">
+              Lisa Sthalekar
+          </div>
+      </div>
+  </div>
+  <div class="owl-item">
+      <div class="card">
+          <div class="img-card">
+              <img src="https://images.pexels.com/photos/1036622/pexels-photo-1036622.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt="">
+          </div>
+          <div class="testimonial mt-4 mb-2" style="font-family: Agency FB;font-style: italic;">
+              Juicy burgers and fresh salads make my day. I'm loving every bit of  it.
+          </div>
+          <div class="name" style="font-family: Agency FB;font-style: italic;">
+              Elizabith Richie
+          </div>
+      </div>
+  </div>
+  <div class="owl-item">
+      <div class="card">
+          <div class="img-card">
+              <img src="https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt="">
+          </div>
+          <div class="testimonial mt-4 mb-2" style="font-family: Agency FB;font-style: italic;">
+              Can't have enough of it.
+          </div>
+          <div class="name"  style="font-family: Agency FB;font-style: italic;">
+              Daniel Xavier
+          </div>
+      </div>
+  </div>
+  <div class="owl-item">
+      <div class="card">
+          <div class="img-card">
+              <img src="https://images.pexels.com/photos/1832959/pexels-photo-1832959.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt="">
+          </div>
+          <div class="testimonial mt-4 mb-2"  style="font-family: Agency FB;font-style: italic;">
+              The best burgers in town.What more to say ?
+          </div>
+          <div class="name" style="font-family: Agency FB;font-style: italic;" >
+              Emma Watson
+          </div>
+      </div>
+  </div>
+  <div class="owl-item">
+      <div class="card">
+          <div class="img-card">
+              <img src="https://images.pexels.com/photos/718261/pexels-photo-718261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                  alt="">
+          </div>
+          <div class="testimonial mt-4 mb-2" style="font-family: Agency FB;font-style: italic;" >
+             Love to have some soul food from time to time here...
+          </div>
+          <div class="name"  style="font-family: Agency FB;font-style: italic;">
+              Mohammad Imran
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   <!-- ======= Chefs Section ======= -->
-<section id="chefs" class="chefs" style="background-image: url(https://wallpaperaccess.com/full/3014745.jpg);background-repeat: no-repeat;background-size: cover ;">
+<section id="chefs" class="chefs" style="background-image: url(https://wallpapercave.com/dwp1x/wp3983003.jpg);background-repeat: no-repeat;background-size: cover ;margin-top: 100px;">
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <h2 style="color: #cda45e;font-family: Agency FB;font-style: italic;" >CHEFS</h2>
-      <p style="color: #cda45e;font-family: Agency FB;font-style: italic;">Our Proffesional Chefs</p>
+      <h2 style="color: #0c0b09;font-family: 'Open Sans',serif;" >CHEFS</h2>
+      <p style="color: #0c0b09;font-family: 'Open Sans',serif;">Our Proffesional Chefs</p>
     </div>
 
     <div class="row">
@@ -792,8 +1021,8 @@
           <img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNoZWZzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" class="img-fluid" alt="">
           <div class="member-info">
             <div class="member-info-content">
-              <h4 style="color: #cda45e;font-family: Agency FB;font-style: italic;">Jack Scepticeye</h4>
-              <span style="color: #cda45e;font-family: Agency FB;font-style: italic;">Master Chef</span>
+              <h4 style="color: gold;font-family: Agency FB;">Jack Scepticeye</h4>
+              <span style="color: gold;font-family: Agency FB;">Master Chef</span>
             </div>
             <div class="social">
               <a href=""><i class="bi bi-twitter"></i></a>
@@ -810,8 +1039,8 @@
           <img src="https://images.unsplash.com/photo-1565608087341-404b25492fee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNoZWZzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" class="img-fluid" alt="">
           <div class="member-info">
             <div class="member-info-content">
-              <h4 style="color: #cda45e;font-family: Agency FB;font-style: italic;">Ann Jemima</h4>
-              <span style="color: #cda45e;font-family: Agency FB;font-style: italic;">Patissier</span>
+              <h4 style="color: gold;font-family: Agency FB;">Ann Jemima</h4>
+              <span style="color: gold;font-family: Agency FB;">Patissier</span>
             </div>
             <div class="social">
               <a href=""><i class="bi bi-twitter"></i></a>
@@ -828,8 +1057,8 @@
           <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNoZWZzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" class="img-fluid" alt="">
           <div class="member-info">
             <div class="member-info-content">
-              <h4 style="color: #cda45e;font-family: Agency FB;font-style: italic;">Zhong Li</h4>
-              <span style="color: #cda45e;font-family: Agency FB;font-style: italic;">Cook</span>
+              <h4 style="color: gold;font-family: Agency FB;">Zhong Li</h4>
+              <span style="color: gold;font-family: Agency FB;">Cook</span>
             </div>
             <div class="social">
               <a href=""><i class="bi bi-twitter"></i></a>
@@ -846,11 +1075,11 @@
   </div>
 </section><!-- End Chefs Section -->
  <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact" style="background-color: #0c0b09;">
-    <div class="container" data-aos="fade-up">
+  <section id="contact" class="contact" style="background-color: #f8f8f8;color: #0c0b09;margin-top: 100px;">
+    <div class="container" data-aos="fade-up" style="background-color: #f8f8f8;color: #0c0b09;">
 
-      <div class="section-title">
-        <h2 style="font-family: 'Agency FB';color: #cda45e;">CONTACT US</h2>
+      <div class="section-title" >
+        <h2 style="font-family: 'Open Sans',serif;color: #0c0b09;">CONTACT US</h2>
         
       </div>
     </div>
@@ -867,14 +1096,14 @@
           <div class="info">
             <div class="address">
               <i class="bi bi-geo-alt"></i>
-              <h4 style="font-style: italic;color: #cda45e;">Location:</h4>
-              <p style="font-style: italic;color: #cda45e;">A108 Rouxville Street, Kochi, EKM 535022</p>
+              <h4 >Location:</h4>
+              <p >B123 Starstruck Street, Kochi, EKM 985644</p>
             </div>
 
             <div class="open-hours">
               <i class="bi bi-clock"></i>
-              <h4 style="font-style: italic;color: #cda45e;">Open Hours:</h4>
-              <p style="font-style: italic;color: #cda45e;">
+              <h4 >Open Hours:</h4>
+              <p >
                 Monday-Saturday:<br>
                 11:00 AM - 2300 PM
               </p>
@@ -882,24 +1111,24 @@
 
             <div class="email">
               <i class="bi bi-envelope"></i>
-              <h4 style="font-style: italic;color: #cda45e;">Email:</h4>
-              <p style="font-style: italic;color: #cda45e;">Restaurantly@example.com</p>
+              <h4 >Email:</h4>
+              <p >Foodheaven@example.com</p>
             </div>
 
             <div class="phone">
               <i class="bi bi-phone"></i>
-              <h4 style="font-style: italic;color: #cda45e;">Call:</h4>
-              <p style="font-style: italic;color: #cda45e;">+08 99999999</p>
+              <h4 >Call:</h4>
+              <p >+08 99999999</p>
             </div>
             <div class="phone">
               <i class="bi bi-phone"></i>
-              <h4 style="font-style: italic;color: #cda45e;">Customer Service:</h4>
-              <p style="font-style: italic;color: #cda45e;">restaurantlycs@gmail.com</p>
+              <h4 >Customer Service:</h4>
+              <p >foodheavencs@gmail.com</p>
             </div>
             <div class="phone">
               <i class="bi bi-phone"></i>
-              <h4 style="font-style: italic;color: #cda45e;">Follow us on Twitter:</h4>
-              <p style="font-style: italic;color: #cda45e;">www.twitter.com</p>
+              <h4 >Follow us on Twitter:</h4>
+              <p >www.twitter.com</p>
             </div>
           </div>
 
@@ -908,9 +1137,9 @@
 
 
         <div class="col-lg-8 mt-5  mt-lg-0">
-
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="About Image" class="img-fluid">
-
+          <div class="tilt pic">
+          <img src="https://wallpapercave.com/dwp1x/wp3983043.jpg" alt="About Image" class="img-fluid">
+           </div>
         </div>
 
 
@@ -925,9 +1154,9 @@
  <a href="#" id="back-to-top" style="float: right;"><img src="https://cdn-icons-png.flaticon.com/128/1174/1174588.png"  height="50px" width="50px" alt=""></a>
 
   <!-- Footer -->
-  <footer class="footer py-3">
+  <footer class="footer py-3 bg-warning" style="margin-top: 100px;">
     <div class="container">
-      <p class="text-center" style="color:#cda45e ;font-style: italic;">&copy; 2023 Restaurantly. All rights reserved.</p>
+      <p class="text-center" style="color:#0c0b09 ;font-style: italic;">&copy; 2023 Food Heaven. All rights reserved.</p>
     </div>
   </footer>
  
@@ -936,6 +1165,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
   <script>
     $(document).ready(function() {
   $(window).scroll(function() {
@@ -952,6 +1182,31 @@
   });
 });
 
+  </script>
+  <script>
+    $(document).ready(function () {
+    var silder = $(".owl-carousel");
+    silder.owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: false,
+        items: 1,
+        stagePadding: 20,
+        center: true,
+        nav: false,
+        margin: 50,
+        dots: true,
+        loop: true,
+        responsive: {
+            0: { items: 1 },
+            480: { items: 2 },
+            575: { items: 2 },
+            768: { items: 2 },
+            991: { items: 3 },
+            1200: { items: 4 }
+        }
+    });
+});
   </script>
 </body>
 </html>
