@@ -9,3 +9,5 @@ def gallery(request):
     return render(request,'gallery.html')
 def cart(request):
     return render(request,'cart.html')
+def menus(request):
+    return render(request,'menusingle.html')

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurantly</title>
+  <title>Food Heaven</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -531,9 +531,9 @@ body {
     
      <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-warning  fixed-top" style="margin-bottom: 100px;" >
-    <div class="container">
+    <div class="container-fluid">
+      <img src="https://cdn-icons-png.flaticon.com/128/3512/3512754.png" height="50px" alt="">
       
-      <h1 style="font-family: 'Open Sans',serif;" class="pl-2 pt-5">Food Heaven</h1>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -571,7 +571,7 @@ body {
                 <div class="p-5">
                   <div class="d-flex justify-content-between align-items-center mb-5">
                     <h1 class="fw-bold mb-0 text-black" style="font-family: 'Open Sans',serif;font-weight: bold;">Shopping Cart</h1>
-                    <h6 class="mb-0 text-muted">3 items</h6>
+                    
                   </div>
                   <hr class="my-4">
 
@@ -678,7 +678,7 @@ body {
                   <hr class="my-4">
 
                   <div class="pt-5">
-                    <h6 class="mb-0"><a href="#!" class="text-body"><i
+                    <h6 class="mb-0"><a href="{% url 'menu' %}" class="text-body"><i
                           class="fas fa-long-arrow-alt-left me-2"></i>Back to menu</a></h6>
                   </div>
                 </div>
@@ -704,8 +704,8 @@ body {
                     <h5>$ 31</h5>
                   </div>
 
-                  <button type="button" class="btn btn-dark btn-block btn-lg bg-warning"
-                    data-mdb-ripple-color="dark" >Register</button>
+                  <button type="button" class="btn btn-dark btn-block btn-lg bg-success"
+                    data-mdb-ripple-color="dark" >Checkout</button>
 
                 </div>
               </div>
